@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+}
+
+section {
+    background-color: white;
+    margin: 25px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.transition-btn {
+    background-color: blue;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.transition-btn:hover {
+    background-color: green;
+}
+
+.transform-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.scale:hover {
+    transform: scale(1.3);
+}
+
+.rotate:hover {
+    transform: rotate(30deg);
+}
+
+.translate:hover {
+    transform: translateX(30px);
+}
+
+.animation-area {
+    height: 150px;
+    position: relative;
+}
+
+@keyframes moveBox {
+    from {
+        left: 0;
+        background-color: red;
+    }
+
+    to {
+        left: 80%;
+        background-color: purple;
+    }
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
